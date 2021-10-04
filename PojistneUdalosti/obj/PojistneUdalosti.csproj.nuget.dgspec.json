@@ -4,14 +4,14 @@
     "C:\\Users\\lonet\\source\\repos\\PojistneUdalosti\\PojistneUdalosti\\PojistneUdalosti.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lonet\\source\\repos\\PojistneUdalosti\\PojistneUdalosti\\PojistneUdalosti.csproj": {
+    "C:\\Users\\lonet\\source\\repos\\PojistneUdalosti\\PojistneUdalosti.DataAccess\\PojistneUdalosti.DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lonet\\source\\repos\\PojistneUdalosti\\PojistneUdalosti\\PojistneUdalosti.csproj",
-        "projectName": "PojistneUdalosti",
-        "projectPath": "C:\\Users\\lonet\\source\\repos\\PojistneUdalosti\\PojistneUdalosti\\PojistneUdalosti.csproj",
+        "projectUniqueName": "C:\\Users\\lonet\\source\\repos\\PojistneUdalosti\\PojistneUdalosti.DataAccess\\PojistneUdalosti.DataAccess.csproj",
+        "projectName": "PojistneUdalosti.DataAccess",
+        "projectPath": "C:\\Users\\lonet\\source\\repos\\PojistneUdalosti\\PojistneUdalosti.DataAccess\\PojistneUdalosti.DataAccess.csproj",
         "packagesPath": "C:\\Users\\lonet\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lonet\\source\\repos\\PojistneUdalosti\\PojistneUdalosti\\obj\\",
+        "outputPath": "C:\\Users\\lonet\\source\\repos\\PojistneUdalosti\\PojistneUdalosti.DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
@@ -44,29 +44,168 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
-            "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[5.0.7, )"
-            },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[5.0.7, )"
+              "version": "[5.0.10, )"
             },
-            "Microsoft.AspNetCore.Identity.UI": {
+            "Microsoft.EntityFrameworkCore.Relational": {
               "target": "Package",
-              "version": "[5.0.7, )"
-            },
-            "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
-              "target": "Package",
-              "version": "[5.0.7, )"
+              "version": "[5.0.10, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[5.0.7, )"
+              "version": "[5.0.10, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\lonet\\source\\repos\\PojistneUdalosti\\PojistneUdalosti.Models\\PojistneUdalosti.Models.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\lonet\\source\\repos\\PojistneUdalosti\\PojistneUdalosti.Models\\PojistneUdalosti.Models.csproj",
+        "projectName": "PojistneUdalosti.Models",
+        "projectPath": "C:\\Users\\lonet\\source\\repos\\PojistneUdalosti\\PojistneUdalosti.Models\\PojistneUdalosti.Models.csproj",
+        "packagesPath": "C:\\Users\\lonet\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lonet\\source\\repos\\PojistneUdalosti\\PojistneUdalosti.Models\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\lonet\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\lonet\\source\\repos\\PojistneUdalosti\\PojistneUdalosti\\PojistneUdalosti.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\lonet\\source\\repos\\PojistneUdalosti\\PojistneUdalosti\\PojistneUdalosti.csproj",
+        "projectName": "PojistneUdalosti",
+        "projectPath": "C:\\Users\\lonet\\source\\repos\\PojistneUdalosti\\PojistneUdalosti\\PojistneUdalosti.csproj",
+        "packagesPath": "C:\\Users\\lonet\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lonet\\source\\repos\\PojistneUdalosti\\PojistneUdalosti\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\lonet\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\lonet\\source\\repos\\PojistneUdalosti\\PojistneUdalosti.DataAccess\\PojistneUdalosti.DataAccess.csproj": {
+                "projectPath": "C:\\Users\\lonet\\source\\repos\\PojistneUdalosti\\PojistneUdalosti.DataAccess\\PojistneUdalosti.DataAccess.csproj"
+              },
+              "C:\\Users\\lonet\\source\\repos\\PojistneUdalosti\\PojistneUdalosti.Models\\PojistneUdalosti.Models.csproj": {
+                "projectPath": "C:\\Users\\lonet\\source\\repos\\PojistneUdalosti\\PojistneUdalosti.Models\\PojistneUdalosti.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.10, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.10, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[5.0.10, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
+              "target": "Package",
+              "version": "[5.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.10, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
-              "version": "[5.0.7, )"
+              "version": "[5.0.10, )"
             }
           },
           "imports": [

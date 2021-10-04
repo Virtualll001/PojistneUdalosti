@@ -1,0 +1,12 @@
+C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti.Models\bin\Debug\net5.0\PojistneUdalosti.Models.deps.json
+C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti.Models\bin\Debug\net5.0\PojistneUdalosti.Models.dll
+C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti.Models\bin\Debug\net5.0\ref\PojistneUdalosti.Models.dll
+C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti.Models\bin\Debug\net5.0\PojistneUdalosti.Models.pdb
+C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti.Models\obj\Debug\net5.0\PojistneUdalosti.Models.csproj.AssemblyReference.cache
+C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti.Models\obj\Debug\net5.0\PojistneUdalosti.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti.Models\obj\Debug\net5.0\PojistneUdalosti.Models.AssemblyInfoInputs.cache
+C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti.Models\obj\Debug\net5.0\PojistneUdalosti.Models.AssemblyInfo.cs
+C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti.Models\obj\Debug\net5.0\PojistneUdalosti.Models.csproj.CoreCompileInputs.cache
+C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti.Models\obj\Debug\net5.0\PojistneUdalosti.Models.dll
+C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti.Models\obj\Debug\net5.0\ref\PojistneUdalosti.Models.dll
+C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti.Models\obj\Debug\net5.0\PojistneUdalosti.Models.pdb

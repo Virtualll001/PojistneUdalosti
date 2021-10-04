@@ -1,0 +1,12 @@
+C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti.DataAccess\obj\Debug\net5.0\PojistneUdalosti.DataAccess.csproj.AssemblyReference.cache
+C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti.DataAccess\obj\Debug\net5.0\PojistneUdalosti.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti.DataAccess\obj\Debug\net5.0\PojistneUdalosti.DataAccess.AssemblyInfoInputs.cache
+C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti.DataAccess\obj\Debug\net5.0\PojistneUdalosti.DataAccess.AssemblyInfo.cs
+C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti.DataAccess\obj\Debug\net5.0\PojistneUdalosti.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti.DataAccess\bin\Debug\net5.0\PojistneUdalosti.DataAccess.deps.json
+C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti.DataAccess\bin\Debug\net5.0\PojistneUdalosti.DataAccess.dll
+C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti.DataAccess\bin\Debug\net5.0\ref\PojistneUdalosti.DataAccess.dll
+C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti.DataAccess\bin\Debug\net5.0\PojistneUdalosti.DataAccess.pdb
+C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti.DataAccess\obj\Debug\net5.0\PojistneUdalosti.DataAccess.dll
+C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti.DataAccess\obj\Debug\net5.0\ref\PojistneUdalosti.DataAccess.dll
+C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti.DataAccess\obj\Debug\net5.0\PojistneUdalosti.DataAccess.pdb
