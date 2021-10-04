@@ -8,8 +8,9 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace PojistneUdalosti.Controllers
+namespace PojistneUdalosti.Areas.Pojistenec.Controllers
 {
+    [Area("Pojistenec")]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;

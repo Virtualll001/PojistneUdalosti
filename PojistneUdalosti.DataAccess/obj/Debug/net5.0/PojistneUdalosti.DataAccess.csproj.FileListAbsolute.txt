@@ -10,3 +10,8 @@ C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti.DataAccess\bin\Deb
 C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti.DataAccess\obj\Debug\net5.0\PojistneUdalosti.DataAccess.dll
 C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti.DataAccess\obj\Debug\net5.0\ref\PojistneUdalosti.DataAccess.dll
 C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti.DataAccess\obj\Debug\net5.0\PojistneUdalosti.DataAccess.pdb
+C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti.DataAccess\bin\Debug\net5.0\PojistneUdalosti.Models.dll
+C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti.DataAccess\bin\Debug\net5.0\PojistneUdalosti.Utility.dll
+C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti.DataAccess\bin\Debug\net5.0\PojistneUdalosti.Models.pdb
+C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti.DataAccess\bin\Debug\net5.0\PojistneUdalosti.Utility.pdb
+C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti.DataAccess\obj\Debug\net5.0\PojistneUdalosti.DataAccess.csproj.CopyComplete

@@ -1543,6 +1543,26 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "PojistneUdalosti.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/PojistneUdalosti.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PojistneUdalosti.Models.dll": {}
+        }
+      },
+      "PojistneUdalosti.Utility/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/PojistneUdalosti.Utility.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PojistneUdalosti.Utility.dll": {}
+        }
       }
     }
   },
@@ -5848,13 +5868,25 @@
         "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
+    },
+    "PojistneUdalosti.Models/1.0.0": {
+      "type": "project",
+      "path": "../PojistneUdalosti.Models/PojistneUdalosti.Models.csproj",
+      "msbuildProject": "../PojistneUdalosti.Models/PojistneUdalosti.Models.csproj"
+    },
+    "PojistneUdalosti.Utility/1.0.0": {
+      "type": "project",
+      "path": "../PojistneUdalosti.Utility/PojistneUdalosti.Utility.csproj",
+      "msbuildProject": "../PojistneUdalosti.Utility/PojistneUdalosti.Utility.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 5.0.10",
       "Microsoft.EntityFrameworkCore.Relational >= 5.0.10",
-      "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.10"
+      "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.10",
+      "PojistneUdalosti.Models >= 1.0.0",
+      "PojistneUdalosti.Utility >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -5888,7 +5920,14 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\lonet\\source\\repos\\PojistneUdalosti\\PojistneUdalosti.Models\\PojistneUdalosti.Models.csproj": {
+              "projectPath": "C:\\Users\\lonet\\source\\repos\\PojistneUdalosti\\PojistneUdalosti.Models\\PojistneUdalosti.Models.csproj"
+            },
+            "C:\\Users\\lonet\\source\\repos\\PojistneUdalosti\\PojistneUdalosti.Utility\\PojistneUdalosti.Utility.csproj": {
+              "projectPath": "C:\\Users\\lonet\\source\\repos\\PojistneUdalosti\\PojistneUdalosti.Utility\\PojistneUdalosti.Utility.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
