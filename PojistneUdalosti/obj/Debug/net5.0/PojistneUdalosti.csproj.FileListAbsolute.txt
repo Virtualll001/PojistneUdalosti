@@ -441,8 +441,10 @@ C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti\bin\Debug\net5.0\P
 C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti\bin\Debug\net5.0\PojistneUdalosti.Utility.pdb
 C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti\obj\Debug\net5.0\PojistneUdalosti.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti\obj\Debug\net5.0\Razor\Areas\Pojistenec\Views\Home\Index.cshtml.g.cs
-C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti\obj\Debug\net5.0\Razor\Areas\Pojistenec\Views\Home\Privacy.cshtml.g.cs
 C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti\obj\Debug\net5.0\Razor\Areas\Pojistenec\Views\_ViewImports.cshtml.g.cs
 C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti\obj\Debug\net5.0\Razor\Areas\Pojistenec\Views\_ViewStart.cshtml.g.cs
 C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti\obj\Debug\net5.0\Razor\Areas\Admin\Views\_ViewImports.cshtml.g.cs
 C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti\obj\Debug\net5.0\Razor\Areas\Admin\Views\_ViewStart.cshtml.g.cs
+C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti\obj\Debug\net5.0\Razor\Areas\Pojistenec\Views\Home\Info.cshtml.g.cs
+C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll

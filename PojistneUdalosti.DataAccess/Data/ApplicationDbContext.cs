@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using PojistneUdalosti.Models;
 
 namespace PojistneUdalosti.DataAccess.Data
 {
@@ -9,5 +10,6 @@ namespace PojistneUdalosti.DataAccess.Data
             : base(options)
         {
         }
+        public DbSet<Pojisteni> Pojisteni { get; set; }
     }
 }

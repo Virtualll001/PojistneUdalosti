@@ -25,7 +25,7 @@ namespace PojistneUdalosti.Areas.Pojistenec.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Info()
         {
             return View();
         }
