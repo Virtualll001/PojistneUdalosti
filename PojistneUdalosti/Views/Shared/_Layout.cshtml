@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="aplikace pro evidenci pojistných událostí" />
     <meta name="author" content="Kateřina Mlázovská" />
-    <title>@ViewData["Title"] - PojistneUdalosti</title>
+    <title>@ViewData["Title"]</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" />
@@ -28,14 +28,14 @@
                                 Obsah
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Pojištění</a>
+                                <a class="dropdown-item" asp-area="Admin" asp-controller="Pojisteni" asp-action="Index">Pojištění</a>
                                 <a class="dropdown-item" href="#">Another action</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Something else here</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Info">Informace</a>
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Info">Informace</a>
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Poznamky">O projektu</a>
                         </li>
                     </ul>
                     <partial name="_LoginPartial" />
@@ -54,8 +54,8 @@
             &copy; 2021 - Mlázovská - rekvalifikace <a href="https://www.itnetwork.cz/prace-a-podnikani-v-it/rekvalifikacni-kurzy/rekvalifikacni-kurzy-csharp-net/" target="_blank">ITnetwork</a>
         </div>
     </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script><!--? .min-->
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script><!--? .bundle.min-->
     <script src="~/js/site.js" asp-append-version="true"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>

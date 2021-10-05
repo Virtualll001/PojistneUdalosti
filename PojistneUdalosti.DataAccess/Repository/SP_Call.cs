@@ -1,13 +1,12 @@
-﻿using Dapper;
+﻿using PojistneUdalosti.DataAccess.Data;
+using PojistneUdalosti.DataAccess.Repository.IRepository;
+using Dapper;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
-using PojistneUdalosti.DataAccess.Data;
-using PojistneUdalosti.DataAccess.Repository.IRepository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace PojistneUdalosti.DataAccess.Repository
 {

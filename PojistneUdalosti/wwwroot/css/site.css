@@ -199,3 +199,23 @@ body {
     width: 210px !important;
     margin: 0 auto;
 }
+
+ul{
+    list-style-type: square;
+}
+
+.mojeTab {
+    color: #20374c;    
+}
+
+label{
+    color: white;
+}
+
+th {
+    color: #4c9be8;
+}
+
+.dataTables_info{
+    color: white;
+}

@@ -1,0 +1,82 @@
+﻿@{
+    ViewData["Title"] = "O projektu";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+<h2 class="text-primary">Použité zdroje</h2>
+<ul>
+    <li>
+        Ikony <a href="https://fontawesome.com/v6.0/icons?s=solid%2Cbrands" target="_blank">FontAwesome</a>
+    </li>
+    <li>
+        Bootstrap styling <a href="https://bootswatch.com/superhero/" target="_blank">Bootswatch</a>
+    </li>
+    <li>
+        JavaScriptové hlášky <a href="https://codeseven.github.io/toastr/" target="_blank">Toastr</a>
+    </li>
+    <li>
+        Vyskakovací okna <a href="https://sweetalert.js.org/">SweetAlert</a>
+    </li>
+    <li>
+        Tabulky <a href="https://datatables.net/examples/index" target="_blank">DataTables</a>
+    </li>
+    <li>
+        Info k ASP.NET Core MVC <a href="https://www.udemy.com/course/complete-aspnet-core-21-course/" target="_blank">Udemy tutorial</a><br />
+    </li>
+</ul>
+<br />
+
+<h2 class="text-primary">Problémy</h2>
+<strong class="text-danger">Nefunkční scaffolding na Controlleru</strong>
+<br />
+<ul>
+    <li>Chybová hláška: <q>There was an error running the selected code generator: ‚Package restore failed.Rolling back package changes for...</q></li>
+    <li>
+        Kontrola a aktualizace všech NuGetů. (nepomohlo)
+    </li>
+    <li>
+        Restart s vymaznáním souboru .vs (nepomohl)
+    </li>
+    <li>
+        Přeinstalování nugetu: Microsoft.VisualStudio.Web.CodeGeneration.Design (nepomohlo)
+    </li>
+    <li>
+        Vymazání Nuget Cache (nepomohlo)
+    </li>
+    <li>
+        Řešení = nepoužívám scaffolding - vše dělám manuálně podle tutoriálu...
+    </li>
+</ul>
+
+<strong class="text-muted">Ajax error</strong>
+<br />
+<ul>
+    <li>Chybová hláška: <q>DataTables warning: table id=tblData - Ajax error. For more information about this error, please see http://datatables.net/tn/7 </q></li>
+    <li>
+        Nalezena chyba v url - pojisteni.js
+    </li>
+</ul>
+
+<strong class="text-danger">Formát tabulky</strong>
+<br />
+<ul>
+    <li>Problémy s úpravou barev a úpravou jazkové verze textu</li>
+    <li>
+        Řešení = obejít se bez DataTables;
+    </li>
+</ul>
+<br />
+
+<h2 class="text-primary">Doučit se</h2>
+<ul>
+    <li>Areas</li>
+    <li>Repository a UnitOfWork</li>
+    <li>Dapper</li>
+    <li>DataTables a úpravy (barva, text)</li>
+</ul>
+<br />
+<br />
+<p>Postup tvorby projektu viz <a href="https://github.com/Virtualll001/PojistneUdalosti/commits/main" target="_blank">GitHub commits</a>.</p>
+<br />
+

@@ -6,6 +6,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using PojistneUdalosti.DataAccess.Data;
+using PojistneUdalosti.DataAccess.Repository;
+using PojistneUdalosti.DataAccess.Repository.IRepository;
 
 namespace PojistneUdalosti
 {
@@ -25,10 +27,11 @@ namespace PojistneUdalosti
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
             services.AddDatabaseDeveloperPageExceptionFilter();
-
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
-            services.AddControllersWithViews();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddControllersWithViews(); //.AddRazorRuntimeCompilation(); .NET 5 není tøeba
+            //services.AddRazorPages(); .NET 5 není tøeba
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

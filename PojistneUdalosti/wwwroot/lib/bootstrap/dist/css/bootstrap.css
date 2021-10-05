@@ -7585,6 +7585,10 @@ fieldset:disabled .btn {
     white-space: nowrap;
 }
 
+.text-right{
+    text-align: right;
+}
+
 .vr {
     display: inline-block;
     -ms-flex-item-align: stretch;
