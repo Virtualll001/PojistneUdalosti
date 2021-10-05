@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "zA7M6DL8O81RbKNxSLARRXAQzUPIv3fcAI/460QxFpGII6W75w3HDDGxVg22XBEEIfDFY+uEe+f1vXvptlRsSA==",
+  "dgSpecHash": "zyEPjE8VWGNw8RLAT4w5ciwQqOEuxYhWU1kwSMLsZ2M+0xR+sfpz/NqFkeTIhxmlntaauq/hYgCXpR0c+0TtPA==",
   "success": true,
   "projectFilePath": "C:\\Users\\lonet\\source\\repos\\PojistneUdalosti\\PojistneUdalosti\\PojistneUdalosti.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\lonet\\.nuget\\packages\\dapper\\2.0.90\\dapper.2.0.90.nupkg.sha512",
     "C:\\Users\\lonet\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\lonet\\.nuget\\packages\\microsoft.aspnetcore.antiforgery\\2.2.0\\microsoft.aspnetcore.antiforgery.2.2.0.nupkg.sha512",
     "C:\\Users\\lonet\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",

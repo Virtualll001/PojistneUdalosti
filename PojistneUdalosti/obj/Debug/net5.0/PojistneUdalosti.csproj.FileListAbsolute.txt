@@ -448,3 +448,4 @@ C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti\obj\Debug\net5.0\R
 C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti\obj\Debug\net5.0\Razor\Areas\Pojistenec\Views\Home\Info.cshtml.g.cs
 C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
 C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
+C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti\bin\Debug\net5.0\Dapper.dll
