@@ -26,8 +26,7 @@ namespace PojistneUdalosti.DataAccess.Repository
             {
                 objFromDb.TypPojisteni = pojisteni.TypPojisteni;
                 objFromDb.Podminky = pojisteni.Podminky;
-                objFromDb.Zaloha = pojisteni.Zaloha;
-                _db.SaveChanges();
+                objFromDb.Zaloha = pojisteni.Zaloha;                
             }            
         }
     }

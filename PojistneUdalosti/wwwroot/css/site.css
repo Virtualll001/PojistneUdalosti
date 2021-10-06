@@ -66,7 +66,7 @@ html {
 
 body {
     /* Margin bottom by footer height */
-    margin-bottom: 60px;
+    margin-bottom: 60px;   
 }
 
 .footer {
@@ -218,4 +218,9 @@ th {
 
 .dataTables_info{
     color: white;
+}
+
+main{
+    max-width: 900px;
+    margin: 0px auto;
 }

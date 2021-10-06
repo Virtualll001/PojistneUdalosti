@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PojistneUdalosti.DataAccess.Data;
 
 namespace PojistneUdalosti.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20211006133402_addPojistnikUdalostToDb")]
+    partial class addPojistnikUdalostToDb
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -277,6 +279,9 @@ namespace PojistneUdalosti.DataAccess.Migrations
                     b.Property<int>("TelefonCislo")
                         .HasColumnType("int");
 
+                    b.Property<int>("UdalostId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Ulice")
                         .IsRequired()
                         .HasMaxLength(100)
@@ -285,6 +290,8 @@ namespace PojistneUdalosti.DataAccess.Migrations
                     b.HasKey("PojistnikId");
 
                     b.HasIndex("PojisteniId");
+
+                    b.HasIndex("UdalostId");
 
                     b.ToTable("Pojistnik");
                 });
@@ -302,16 +309,16 @@ namespace PojistneUdalosti.DataAccess.Migrations
                     b.Property<int>("PojisteniId")
                         .HasColumnType("int");
 
+                    b.Property<int>("PojistnikId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Popis")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("Potvrzeno")
                         .HasColumnType("bit");
 
                     b.HasKey("UdalostId");
-
-                    b.HasIndex("PojisteniId");
 
                     b.ToTable("Udalost");
                 });
@@ -375,18 +382,15 @@ namespace PojistneUdalosti.DataAccess.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Pojisteni");
-                });
-
-            modelBuilder.Entity("PojistneUdalosti.Models.Udalost", b =>
-                {
-                    b.HasOne("PojistneUdalosti.Models.Pojisteni", "Pojisteni")
+                    b.HasOne("PojistneUdalosti.Models.Udalost", "Udalost")
                         .WithMany()
-                        .HasForeignKey("PojisteniId")
+                        .HasForeignKey("UdalostId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Pojisteni");
+
+                    b.Navigation("Udalost");
                 });
 #pragma warning restore 612, 618
         }

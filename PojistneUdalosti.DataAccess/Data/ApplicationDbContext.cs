@@ -11,5 +11,7 @@ namespace PojistneUdalosti.DataAccess.Data
         {
         }
         public DbSet<Pojisteni> Pojisteni { get; set; }
+        public DbSet<Pojistnik> Pojistnik { get; set; }
+        public DbSet<Udalost> Udalost { get; set; }     
     }
 }

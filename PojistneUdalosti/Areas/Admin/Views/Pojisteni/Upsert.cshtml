@@ -1,0 +1,69 @@
+﻿@model PojistneUdalosti.Models.Pojisteni
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var title = "Vytvořit pojištění";
+    if (Model.PojisteniId != 0)     
+        title = "Úprava pojištění";
+        
+    ViewData["Title"] = title;
+}
+
+<form method="post">
+    <div class="row p-3 border">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>       
+        <div class="col-12 border-bottom">
+            <h2 class="text-primary">@title</h2>
+        </div>
+        <div class="col-11 pt-4">
+            <div class="form-group row mb-2">
+                <div class="col-3">
+                    <label asp-for="TypPojisteni"></label>
+                </div>
+                <div class="col-9">
+                    <input asp-for="TypPojisteni" class="form-control" />
+                    <span asp-validation-for="TypPojisteni" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row mb-2">
+                <div class="col-3">
+                    <label asp-for="Podminky"></label>
+                </div>
+                <div class="col-9">
+                    <input asp-for="Podminky" class="form-control" />
+                    <span asp-validation-for="Podminky" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row mb-2">
+                <div class="col-3">
+                    <label asp-for="Zaloha"></label>
+                </div>
+                <div class="col-9">
+                    <input asp-for="Zaloha" class="form-control" />
+                    <span asp-validation-for="Zaloha" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row mb-2">
+                <div class="col-9 offset-3">
+                    @if (Model.PojisteniId != 0)
+                    {
+                        <partial name="_EditAndBackToListButton" model="Model.PojisteniId" />
+                    }
+                    else
+                    {
+                        <partial name="_CreateAndBackToListButton" />
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+@section Scripts{
+<partial name="_ValidationScriptsPartial" />
+ }
+
+
+@{
+    //TODO - dořešit přidání pojistníka ke konkrétnímu pojištění + vytvořit statuty např: před schválením, schváleno, aktivní, neaktivní...
+}
+
