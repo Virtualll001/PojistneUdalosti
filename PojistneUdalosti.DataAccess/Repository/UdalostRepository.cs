@@ -29,7 +29,7 @@ namespace PojistneUdalosti.DataAccess.Repository
                 }  
                 objFromDb.Popis = udalost.Popis;                
                 objFromDb.Potvrzeno = udalost.Potvrzeno;
-                objFromDb.PojisteniId = udalost.PojisteniId;                               
+                objFromDb.PojistnikId = udalost.PojistnikId;                               
             }            
         }
     }

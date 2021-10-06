@@ -460,3 +460,7 @@ C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti\bin\Debug\net5.0\r
 C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti\obj\Debug\net5.0\Razor\Areas\Admin\Views\Pojisteni\Upsert.cshtml.g.cs
 C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti\obj\Debug\net5.0\Razor\Views\Shared\_CreateAndBackToListButton.cshtml.g.cs
 C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti\obj\Debug\net5.0\Razor\Views\Shared\_EditAndBackToListButton.cshtml.g.cs
+C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti\obj\Debug\net5.0\Razor\Areas\Admin\Views\Pojistnik\Index.cshtml.g.cs
+C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti\obj\Debug\net5.0\Razor\Areas\Admin\Views\Pojistnik\Upsert.cshtml.g.cs
+C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti\obj\Debug\net5.0\Razor\Areas\Admin\Views\Udalost\Index.cshtml.g.cs
+C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti\obj\Debug\net5.0\Razor\Areas\Admin\Views\Udalost\Upsert.cshtml.g.cs

@@ -250,18 +250,14 @@ namespace PojistneUdalosti.DataAccess.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("Cislo")
-                        .HasColumnType("int");
+                    b.Property<string>("Adresa")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Jmeno")
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
-
-                    b.Property<string>("Mesto")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
 
                     b.Property<int>("PojisteniId")
                         .HasColumnType("int");
@@ -271,16 +267,8 @@ namespace PojistneUdalosti.DataAccess.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.Property<int>("SmerovaciCislo")
-                        .HasColumnType("int");
-
                     b.Property<int>("TelefonCislo")
                         .HasColumnType("int");
-
-                    b.Property<string>("Ulice")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
 
                     b.HasKey("PojistnikId");
 
@@ -299,7 +287,7 @@ namespace PojistneUdalosti.DataAccess.Migrations
                     b.Property<string>("Foto")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("PojisteniId")
+                    b.Property<int>("PojistnikId")
                         .HasColumnType("int");
 
                     b.Property<string>("Popis")
@@ -311,7 +299,7 @@ namespace PojistneUdalosti.DataAccess.Migrations
 
                     b.HasKey("UdalostId");
 
-                    b.HasIndex("PojisteniId");
+                    b.HasIndex("PojistnikId");
 
                     b.ToTable("Udalost");
                 });
@@ -380,13 +368,13 @@ namespace PojistneUdalosti.DataAccess.Migrations
 
             modelBuilder.Entity("PojistneUdalosti.Models.Udalost", b =>
                 {
-                    b.HasOne("PojistneUdalosti.Models.Pojisteni", "Pojisteni")
+                    b.HasOne("PojistneUdalosti.Models.Pojistnik", "Pojistnik")
                         .WithMany()
-                        .HasForeignKey("PojisteniId")
+                        .HasForeignKey("PojistnikId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Pojisteni");
+                    b.Navigation("Pojistnik");
                 });
 #pragma warning restore 612, 618
         }

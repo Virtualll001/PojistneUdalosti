@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Pojistná událost";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+<div class="row">
+    <div class="col-6">
+        <h2 class="text-primary">Pojistná událost</h2>
+    </div>
+    <div class="col-6 text-right">
+        <a class="btn btn-primary" asp-action="Upsert"><i class="fas fa-plus"></i>&nbsp; Nová pojistná událost</a>
+    </div>
+</div>
+
+<br />
+<div class="p-4 border rounded">
+    <table id="tblData" class="mojeTab" style="width:100%">
+        <thead>
+            <tr>
+                <th>Foto</th>
+                <th>Popis</th>
+                <th>Stav</th>
+                <th></th>
+            </tr>
+        </thead>
+    </table>
+</div>
+
+@section Scripts{
+    <script src="~/js/udalost.js"></script>
+}

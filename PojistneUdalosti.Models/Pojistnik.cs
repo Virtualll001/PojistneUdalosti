@@ -21,28 +21,17 @@ namespace PojistneUdalosti.Models
         [StringLength(50)]
         [DisplayName("Příjmení")]
         public string Prijmeni { get; set; }
+        [Required]       
+        public string Adresa { get; set; }       
         [Required]
-        [StringLength(100)]
-        public string Ulice { get; set; }
-        [Required]
-        [DisplayName("Číslo")]
-        public int Cislo { get; set; }
-        [Required]
-        [StringLength(100)]
-        [DisplayName("Město")]
-        public string Mesto { get; set; }
-        [DisplayName("Směrovací číslo")]      
-        public int SmerovaciCislo { get; set; }
-        [Required]
-        [DisplayName("Telefonní číslo")]
-        [Range(6,12)]
+        [DisplayName("Telefonní číslo")]        
         public int TelefonCislo { get; set; }
 
-        //propojení s tabulkou pojištění
+        //propojení s tabulkou pojištění (tabulka Událost je propojená s tabulkou pojištění)
         [Required]       
         public int PojisteniId { get; set; }
         [ForeignKey("PojisteniId")]
-        public Pojisteni Pojisteni { get; set; }       
-        
+        public Pojisteni Pojisteni { get; set; }         
+
     }
 }

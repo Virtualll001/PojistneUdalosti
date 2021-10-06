@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -16,11 +17,12 @@ namespace PojistneUdalosti.Models
         public string Popis { get; set; }
         public string Foto { get; set; }
         [Required]
+        [DisplayName("Stav")]
         public bool Potvrzeno { get; set; }
         
         [Required]
-        public int PojisteniId { get; set; }
-        [ForeignKey("PojisteniId")]
-        public Pojisteni Pojisteni { get; set; }
+        public int PojistnikId { get; set; }
+        [ForeignKey("PojistnikId")]
+        public Pojistnik Pojistnik { get; set; }
     }
 }

@@ -26,10 +26,7 @@ namespace PojistneUdalosti.DataAccess.Repository
             {
                 objFromDb.Jmeno = pojistnik.Jmeno;
                 objFromDb.Prijmeni = pojistnik.Prijmeni;
-                objFromDb.Ulice = pojistnik.Ulice;
-                objFromDb.Cislo = pojistnik.Cislo;
-                objFromDb.Mesto = pojistnik.Mesto;
-                objFromDb.SmerovaciCislo = pojistnik.SmerovaciCislo;
+                objFromDb.Adresa = pojistnik.Adresa;              
                 objFromDb.TelefonCislo = pojistnik.TelefonCislo;
                 objFromDb.PojisteniId = pojistnik.PojisteniId;                              
             }
