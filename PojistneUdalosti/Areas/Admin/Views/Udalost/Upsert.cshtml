@@ -8,8 +8,9 @@
     ViewData["Title"] = title;
 }
 
-<form method="post">
+<form method="post" enctype="multipart/form-data">
     <div class="row p-3 border">
+        <input type="hidden" asp-for="UdalostId" />
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
         <div class="col-12 border-bottom">
             <h2 class="text-primary">@title</h2>
@@ -17,20 +18,19 @@
         <div class="col-11 pt-4">
             <div class="form-group row mb-2">
                 <div class="col-3">
-                    <label asp-for="Foto"></label>
+                    <label asp-for="Popis"></label>
                 </div>
                 <div class="col-9">
-                    <input asp-for="Foto" class="form-control" />
-                    <span asp-validation-for="Foto" class="text-danger"></span>
+                    <textarea asp-for="Popis" class="form-control"></textarea>
+                    <span asp-validation-for="Popis" class="text-danger"></span>
                 </div>
             </div>
             <div class="form-group row mb-2">
                 <div class="col-3">
-                    <label asp-for="Popis"></label>
+                    Fotografie
                 </div>
                 <div class="col-9">
-                    <input asp-for="Popis" class="form-control" />
-                    <span asp-validation-for="Popis" class="text-danger"></span>
+                    <input type="file" name="files" id="uploadBox" multiple class="form-control" />
                 </div>
             </div>
             <div class="form-group row mb-2">
@@ -38,8 +38,18 @@
                     <label asp-for="Potvrzeno"></label>
                 </div>
                 <div class="col-9">
-                    <input asp-for="Potvrzeno" class="form-control" />
+                    <input type="radio" name="Potvrzeno" value="neschváleno" checked="checked" asp-for="Potvrzeno" class="form-control" />
+                    <input type="radio" name="Potvrzeno" value="schváleno" asp-for="Potvrzeno" class="form-control" />
                     <span asp-validation-for="Potvrzeno" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row mb-2">
+                <div class="col-3">
+                    <label asp-for="PojistnikId"></label>
+                </div>
+                <div class="col-9">
+                    <input asp-for="PojistnikId" class="form-control" />
+                    <span asp-validation-for="PojistnikId" class="text-danger"></span>
                 </div>
             </div>
             <div class="form-group row mb-2">
@@ -50,14 +60,44 @@
                     }
                     else
                     {
-                        <partial name="_CreateAndBackToListButton" />
+                        <div class="row">
+                            <div class="col">
+                                <button type="submit" onclick="return validateInput()" class="btn btn-primary form-control">Vytvořit</button>
+                            </div> <!--pro tvorbu je také potřeba ID... -->
+                            <div class="col">
+                                <a asp-action="Index" class="btn btn-success form-control">Zpět</a>
+                            </div>
+                        </div>
                     }
                 </div>
             </div>
         </div>
+        @if(Model.UdalostId != 0)
+            {
+                <div class="col-3 offset-1 pt-4">
+                    <img src="@Model.ImageUrl" class="udalostImg" />
+                </div>
+            }
     </div>
 </form>
 
 @section Scripts{
     <partial name="_ValidationScriptsPartial" />
+    <script src="https://cdn.tiny.cloud/1/2a6fzjt9uzdw1mmjcjgf8b415mhyre474vr11ps76qidteas/tinymce/5/tinymce.min.js"></script>
+    
+    <script>
+        tinymce.init({
+            selector: 'textarea',
+            plugins: 'lists',
+            menubar: 'file edit format'
+        });
+
+        function validateInput() {
+            if (document.getElementById("uploadBox").value == "") {
+                swal("Error", "Prosím zvolte fotografii", "error");
+                return false
+            }
+            return true;        
+        }
+    </script>
 }

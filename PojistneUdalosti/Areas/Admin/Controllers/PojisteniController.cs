@@ -27,17 +27,17 @@ namespace PojistneUdalosti.Areas.Admin.Controllers
         public IActionResult Upsert(int? id)
         {
             Pojisteni pojisteni = new Pojisteni();
-            if(id == null) //jde o CREATE
+            if (id == null) //jde o CREATE
             {
                 return View(pojisteni);
             }
             //jde o EDIT
             pojisteni = _unitOfWork.Pojisteni.Get(id.GetValueOrDefault());
-            if(pojisteni == null)
+            if (pojisteni == null)
             {
                 return NotFound();
             }
-            return View(pojisteni);            
+            return View(pojisteni);
         }
 
         [HttpPost]
@@ -48,7 +48,7 @@ namespace PojistneUdalosti.Areas.Admin.Controllers
             {
                 if (pojisteni.PojisteniId == 0)
                 {
-                    _unitOfWork.Pojisteni.Add(pojisteni);                   
+                    _unitOfWork.Pojisteni.Add(pojisteni);
                 }
                 else
                 {
@@ -73,7 +73,7 @@ namespace PojistneUdalosti.Areas.Admin.Controllers
         public IActionResult Delete(int id)
         {
             var objFromDb = _unitOfWork.Pojisteni.Get(id);
-            if(objFromDb == null)
+            if (objFromDb == null)
             {
                 return Json(new { success = false, message = "Odstranění se nezdařilo." });
             }

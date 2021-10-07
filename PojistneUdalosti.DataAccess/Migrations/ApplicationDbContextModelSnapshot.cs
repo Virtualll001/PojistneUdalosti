@@ -287,6 +287,9 @@ namespace PojistneUdalosti.DataAccess.Migrations
                     b.Property<string>("Foto")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("ImageUrl")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("PojistnikId")
                         .HasColumnType("int");
 

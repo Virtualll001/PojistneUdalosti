@@ -1,8 +1,9 @@
-﻿@model PojistneUdalosti.Models.Pojistnik
+﻿<!--ne "Pojistník, ale ViewModel!"-->
+@model PojistneUdalosti.Models.ViewModels.PojistnikVM
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
     var title = "Nový pojistník";
-    if (Model.PojisteniId != 0)
+    if (Model.Pojistnik.PojisteniId != 0)
         title = "Úprava záznamu";
 
     ViewData["Title"] = title;
@@ -10,6 +11,7 @@
 
 <form method="post">
     <div class="row p-3 border">
+        <input type="hidden" asp-for="Pojistnik.PojistnikId" />
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
         <div class="col-12 border-bottom">
             <h2 class="text-primary">@title</h2>
@@ -17,50 +19,59 @@
         <div class="col-11 pt-4">
             <div class="form-group row mb-2">
                 <div class="col-3">
-                    <label asp-for="Jmeno"></label>
+                    <label asp-for="Pojistnik.Jmeno"></label>
                 </div>
                 <div class="col-9">
-                    <input asp-for="Jmeno" class="form-control" />
-                    <span asp-validation-for="Jmeno" class="text-danger"></span>
+                    <input asp-for="Pojistnik.Jmeno" class="form-control" />
+                    <span asp-validation-for="Pojistnik.Jmeno" class="text-danger"></span>
                 </div>
             </div>
             <div class="form-group row mb-2">
                 <div class="col-3">
-                    <label asp-for="Prijmeni"></label>
+                    <label asp-for="Pojistnik.Prijmeni"></label>
                 </div>
                 <div class="col-9">
-                    <input asp-for="Prijmeni" class="form-control" />
-                    <span asp-validation-for="Prijmeni" class="text-danger"></span>
+                    <input asp-for="Pojistnik.Prijmeni" class="form-control" />
+                    <span asp-validation-for="Pojistnik.Prijmeni" class="text-danger"></span>
                 </div>
             </div>
             <div class="form-group row mb-2">
                 <div class="col-3">
-                    <label asp-for="Adresa"></label>
+                    <label asp-for="Pojistnik.Adresa"></label>
                 </div>
                 <div class="col-9">
-                    <input asp-for="Adresa" class="form-control" />
-                    <span asp-validation-for="Adresa" class="text-danger"></span>
-                </div>
-            </div>            
-            </div><div class="form-group row mb-2">
-                <div class="col-3">
-                    <label asp-for="TelefonCislo"></label>
-                </div>
-                <div class="col-9">
-                    <input asp-for="TelefonCislo" class="form-control" />
-                    <span asp-validation-for="TelefonCislo" class="text-danger"></span>
+                    <input asp-for="Pojistnik.Adresa" class="form-control" />
+                    <span asp-validation-for="Pojistnik.Adresa" class="text-danger"></span>
                 </div>
             </div>
-
+            <div class="form-group row mb-2">
+                <div class="col-3">
+                    <label asp-for="Pojistnik.TelefonCislo"></label>
+                </div>
+                <div class="col-9">
+                    <input asp-for="Pojistnik.TelefonCislo" class="form-control" />
+                    <span asp-validation-for="Pojistnik.TelefonCislo" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row mb-2">
+                <div class="col-3">
+                    Pojištění
+                </div>
+                <div class="col-9">
+                    @Html.DropDownListFor(m => m.Pojistnik.PojisteniId, Model.SeznamPojisteni, "Zvolte typ",
+                    new { @class = "from-control" })
+                    <span asp-validation-for="Pojistnik.PojisteniId" class="text-danger"></span>
+                </div>
+            </div>
             <div class="form-group row mb-2">
                 <div class="col-9 offset-3">
-                    @if (Model.PojistnikId != 0)
+                    @if (Model.Pojistnik.PojistnikId != 0)
                     {
-                        <partial name="_EditAndBackToListButton" model="Model.PojistnikId" />
+                        <partial name="_EditAndBackToListButton" model="Model.Pojistnik.PojistnikId" /> //při editu je potřeba ID
                     }
                     else
-                    {
-                        <partial name="_CreateAndBackToListButton" />
+                    {                        
+                        <partial name="_CreateAndBackToListButton" />                        
                     }
                 </div>
             </div>
@@ -69,7 +80,7 @@
 </form>
 
 @section Scripts{
-    <partial name="_ValidationScriptsPartial" />
+    <partial name="_ValidationScriptsPartial" />    
 }
 
 

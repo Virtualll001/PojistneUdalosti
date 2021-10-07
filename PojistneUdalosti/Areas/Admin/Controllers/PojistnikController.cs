@@ -34,7 +34,6 @@ namespace PojistneUdalosti.Areas.Admin.Controllers
                 })
             };
 
-
             if(id == null) //jde o CREATE
             {
                 return View(pojistnikVM);
@@ -50,22 +49,25 @@ namespace PojistneUdalosti.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Upsert(Pojistnik pojistnik)
+        public IActionResult Upsert(PojistnikVM pojistnikVM)
         {
             if (ModelState.IsValid)
             {
-                if (pojistnik.PojistnikId == 0)
+                //tady dodělat opravy kvůli ViewModelu!
+
+
+                if (pojistnikVM.Pojistnik.PojistnikId == 0)
                 {
-                    _unitOfWork.Pojistnik.Add(pojistnik);                   
+                    _unitOfWork.Pojistnik.Add(pojistnikVM.Pojistnik);                   
                 }
                 else
                 {
-                    _unitOfWork.Pojistnik.Update(pojistnik);
+                    _unitOfWork.Pojistnik.Update(pojistnikVM.Pojistnik);
                 }
                 _unitOfWork.Save();
-                return RedirectToAction(nameof(Index)); //nepoužívat "magic-string" např.: "Index"
+                return RedirectToAction(nameof(Index)); //nepoužívat "magic-string"
             }
-            return View(pojistnik);
+            return View(pojistnikVM);
         }
 
         //API calls (funguje u MVC)

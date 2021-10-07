@@ -10,11 +10,11 @@ function loadDataTable() {
             "url": "/Admin/Pojistnik/GetAll"           
         },
         "columns": [
-            { "data": "jmeno", "width": "10%" },
+            { "data": "jmeno", "width": "8%" }, //camel case - první písmeno malé!
             { "data": "prijmeni", "width": "10%" },
-            { "data": "adresa", "width": "30%" },            
-            { "data": "telefonniCislo", "width": "15%" },
-            { "data": "pojisteni.TypPojisteni", "width": "15%" },
+            { "data": "adresa", "width": "22%" },            
+            { "data": "telefonCislo", "width": "15%" },
+            { "data": "pojisteni.pojisteniId", "width": "15%" }, //za tečkou se píše malé písmeno!
             {
                 "data": "pojistnikId",
                 "render": function (data) {
@@ -27,7 +27,7 @@ function loadDataTable() {
                                     <i class="fas fa-trash-alt"></i>
                                 </a>
                             </div>`;
-                }, "width": "20%"
+                }, "width": "30%"
             }
         ]
     });

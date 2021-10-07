@@ -4,6 +4,7 @@ using PojistneUdalosti.DataAccess.Repository.IRepository;
 using PojistneUdalosti.Models;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -43,25 +44,60 @@ namespace PojistneUdalosti.Areas.Admin.Controllers
             return View(udalost);            
         }
 
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public IActionResult Upsert(Udalost udalost)
-        //{
-        //    if (ModelState.IsValid)
-        //    {
-        //        if (udalost.UdalostId == 0)
-        //        {
-        //            _unitOfWork.Udalost.Add(udalost);                   
-        //        }
-        //        else
-        //        {
-        //            _unitOfWork.Udalost.Update(udalost);
-        //        }
-        //        _unitOfWork.Save();
-        //        return RedirectToAction(nameof(Index)); //nepoužívat "magic-string" např.: "Index"
-        //    }
-        //    return View(udalost);
-        //}
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Upsert(Udalost udalost)
+        {
+            if (ModelState.IsValid)
+            {
+                //práce se souborem... 
+                string webRootPath = _hostEnvironment.WebRootPath;
+                var files = HttpContext.Request.Form.Files;
+                if(files.Count > 0)
+                {
+                    string fileName = Guid.NewGuid().ToString();
+                    var uploads = Path.Combine(webRootPath, @"img\udalosti");
+                    var extension = Path.GetExtension(files[0].FileName);
+                    
+                    if(udalost.ImageUrl != null)
+                    {
+                        //edit - odstranění staré fotky
+                        var imagePath = Path.Combine(webRootPath, udalost.ImageUrl.TrimStart('\\'));
+                        if (System.IO.File.Exists(imagePath))
+                        {
+                            System.IO.File.Delete(imagePath);
+                        }
+                    }
+                    using(var filesStreams = new FileStream(Path.Combine(uploads, fileName + extension), FileMode.Create))
+                    {
+                        files[0].CopyTo(filesStreams);
+                    }
+                    udalost.ImageUrl = @"\img\udalosti\" + fileName + extension;
+                }
+                else
+                {
+                    //update - když se foto nemění
+                    if(udalost.UdalostId != 0)
+                    {
+                        Udalost objFromDb = _unitOfWork.Udalost.Get(udalost.UdalostId);
+                        udalost.ImageUrl = objFromDb.ImageUrl;
+                    }
+                }
+
+                if (udalost.UdalostId == 0)
+                {
+                    _unitOfWork.Udalost.Add(udalost);
+                }
+                else
+                {
+                    _unitOfWork.Udalost.Update(udalost);
+                }
+                _unitOfWork.Save();
+                return RedirectToAction(nameof(Index)); //nepoužívat "magic-string"
+            }
+            return View(udalost);
+        }
+
 
         //API calls (funguje u MVC)
         #region API CALLS

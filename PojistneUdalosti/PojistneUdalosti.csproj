@@ -25,4 +25,8 @@
     <ProjectReference Include="..\PojistneUdalosti.Utility\PojistneUdalosti.Utility.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\img\udalosti\" />
+  </ItemGroup>
+
 </Project>

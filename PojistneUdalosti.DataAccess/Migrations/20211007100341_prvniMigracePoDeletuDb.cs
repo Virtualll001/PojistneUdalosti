@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace PojistneUdalosti.DataAccess.Migrations
 {
-    public partial class AddDefaultIdentityMigration : Migration
+    public partial class prvniMigracePoDeletuDb : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -44,6 +44,21 @@ namespace PojistneUdalosti.DataAccess.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_AspNetUsers", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Pojisteni",
+                columns: table => new
+                {
+                    PojisteniId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    TypPojisteni = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    Podminky = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Zaloha = table.Column<double>(type: "float", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Pojisteni", x => x.PojisteniId);
                 });
 
             migrationBuilder.CreateTable(
@@ -152,6 +167,52 @@ namespace PojistneUdalosti.DataAccess.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "Pojistnik",
+                columns: table => new
+                {
+                    PojistnikId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Jmeno = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    Prijmeni = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    Adresa = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    TelefonCislo = table.Column<int>(type: "int", nullable: false),
+                    PojisteniId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Pojistnik", x => x.PojistnikId);
+                    table.ForeignKey(
+                        name: "FK_Pojistnik_Pojisteni_PojisteniId",
+                        column: x => x.PojisteniId,
+                        principalTable: "Pojisteni",
+                        principalColumn: "PojisteniId",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Udalost",
+                columns: table => new
+                {
+                    UdalostId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Popis = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Foto = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ImageUrl = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Potvrzeno = table.Column<bool>(type: "bit", nullable: false),
+                    PojistnikId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Udalost", x => x.UdalostId);
+                    table.ForeignKey(
+                        name: "FK_Udalost_Pojistnik_PojistnikId",
+                        column: x => x.PojistnikId,
+                        principalTable: "Pojistnik",
+                        principalColumn: "PojistnikId",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
                 table: "AspNetRoleClaims",
@@ -190,6 +251,16 @@ namespace PojistneUdalosti.DataAccess.Migrations
                 column: "NormalizedUserName",
                 unique: true,
                 filter: "[NormalizedUserName] IS NOT NULL");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Pojistnik_PojisteniId",
+                table: "Pojistnik",
+                column: "PojisteniId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Udalost_PojistnikId",
+                table: "Udalost",
+                column: "PojistnikId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -210,10 +281,19 @@ namespace PojistneUdalosti.DataAccess.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
+                name: "Udalost");
+
+            migrationBuilder.DropTable(
                 name: "AspNetRoles");
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");
+
+            migrationBuilder.DropTable(
+                name: "Pojistnik");
+
+            migrationBuilder.DropTable(
+                name: "Pojisteni");
         }
     }
 }

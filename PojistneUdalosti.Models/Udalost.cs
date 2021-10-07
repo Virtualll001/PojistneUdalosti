@@ -16,6 +16,7 @@ namespace PojistneUdalosti.Models
         [Required]
         public string Popis { get; set; }
         public string Foto { get; set; }
+        public string ImageUrl { get; set; }
         [Required]
         [DisplayName("Stav")]
         public bool Potvrzeno { get; set; }

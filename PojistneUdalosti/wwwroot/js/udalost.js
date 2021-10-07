@@ -10,9 +10,10 @@ function loadDataTable() {
             "url": "/Admin/Udalost/GetAll"           
         },
         "columns": [
-            { "data": "foto", "width": "20%" },
-            { "data": "popis", "width": "50%" },
+            { "data": "popis", "width": "40%" },
+            { "data": "foto", "width": "20%" },           
             { "data": "potvrzeno", "width": "10%" },
+            { "data": "pojistnikId", "width": "10%"}, //je správně ?
             {
                 "data": "udalostId",
                 "render": function (data) {
