@@ -7,13 +7,14 @@ $(document).ready(function () {
 function loadDataTable() {
     dataTable = $('#tblData').DataTable({
         "ajax": {
-            "url": "/Admin/Udalost/GetAll"           
+            "url": "/Admin/Udalost/GetAll",
+            "type": "POST" //pokus o opravu chybové hlášky - případně odebrat!
         },
         "columns": [
             { "data": "popis", "width": "40%" },
             { "data": "foto", "width": "20%" },           
             { "data": "potvrzeno", "width": "10%" },
-            { "data": "pojistnikId", "width": "10%"}, //je správně ?
+            { "data": "pojistnikId", "width": "10%"},
             {
                 "data": "udalostId",
                 "render": function (data) {

@@ -1,8 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using PojistneUdalosti.DataAccess.Repository.IRepository;
-using PojistneUdalosti.Models;
 using PojistneUdalosti.Models.ViewModels;
+using PojistneUdalosti.Models;
 using System.Linq;
 
 namespace PojistneUdalosti.Areas.Admin.Controllers
@@ -11,11 +12,12 @@ namespace PojistneUdalosti.Areas.Admin.Controllers
     public class PojistnikController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
-        
+        private readonly IWebHostEnvironment _hostEnvironment;
 
-        public PojistnikController(IUnitOfWork unitOfWork)
+        public PojistnikController(IUnitOfWork unitOfWork, IWebHostEnvironment hostEnvironment)
         {
-            _unitOfWork = unitOfWork;            
+            _unitOfWork = unitOfWork;
+            _hostEnvironment = hostEnvironment;
         }
 
         public IActionResult Index()
@@ -27,7 +29,7 @@ namespace PojistneUdalosti.Areas.Admin.Controllers
         {
             PojistnikVM pojistnikVM = new PojistnikVM()
             {
-                Pojistnik = new Pojistnik(),
+                //Pojistnik = new Pojistnik(),
                 SeznamPojisteni = _unitOfWork.Pojisteni.GetAll().Select(i => new SelectListItem {
                     Text = i.TypPojisteni,                    
                     Value = i.PojisteniId.ToString()
@@ -67,6 +69,18 @@ namespace PojistneUdalosti.Areas.Admin.Controllers
                 _unitOfWork.Save();
                 return RedirectToAction(nameof(Index)); //nepoužívat "magic-string"
             }
+            else
+            {
+                pojistnikVM.SeznamPojisteni = _unitOfWork.Pojisteni.GetAll().Select(i => new SelectListItem
+                {
+                    Text = i.TypPojisteni,
+                    Value = i.PojisteniId.ToString()
+                });
+                if(pojistnikVM.Pojistnik.PojistnikId != 0)
+                {
+                    pojistnikVM.Pojistnik = _unitOfWork.Pojistnik.Get(pojistnikVM.Pojistnik.PojistnikId);
+                }
+            }
             return View(pojistnikVM);
         }
 
@@ -75,7 +89,7 @@ namespace PojistneUdalosti.Areas.Admin.Controllers
         [HttpGet]
         public IActionResult GetAll()
         {
-            var allObj = _unitOfWork.Pojistnik.GetAll(includeProperties:"Pojisteni");
+            var allObj = _unitOfWork.Pojistnik.GetAll();//includeProperties:"Pojisteni"
             return Json(new { data = allObj });
         }
 

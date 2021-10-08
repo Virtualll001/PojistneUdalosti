@@ -440,16 +440,11 @@ C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti\bin\Debug\net5.0\r
 C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti\bin\Debug\net5.0\PojistneUdalosti.Utility.dll
 C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti\bin\Debug\net5.0\PojistneUdalosti.Utility.pdb
 C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti\obj\Debug\net5.0\PojistneUdalosti.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti\obj\Debug\net5.0\Razor\Areas\Pojistenec\Views\Home\Index.cshtml.g.cs
-C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti\obj\Debug\net5.0\Razor\Areas\Pojistenec\Views\_ViewImports.cshtml.g.cs
-C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti\obj\Debug\net5.0\Razor\Areas\Pojistenec\Views\_ViewStart.cshtml.g.cs
 C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti\obj\Debug\net5.0\Razor\Areas\Admin\Views\_ViewImports.cshtml.g.cs
 C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti\obj\Debug\net5.0\Razor\Areas\Admin\Views\_ViewStart.cshtml.g.cs
-C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti\obj\Debug\net5.0\Razor\Areas\Pojistenec\Views\Home\Info.cshtml.g.cs
 C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
 C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
 C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti\bin\Debug\net5.0\Dapper.dll
-C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti\obj\Debug\net5.0\Razor\Areas\Pojistenec\Views\Home\Poznamky.cshtml.g.cs
 C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti\obj\Debug\net5.0\Razor\Areas\Admin\Views\Pojisteni\Index.cshtml.g.cs
 C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti\bin\Debug\net5.0\System.Data.SqlClient.dll
 C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti\bin\Debug\net5.0\runtimes\win-arm64\native\sni.dll
@@ -464,3 +459,8 @@ C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti\obj\Debug\net5.0\R
 C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti\obj\Debug\net5.0\Razor\Areas\Admin\Views\Pojistnik\Upsert.cshtml.g.cs
 C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti\obj\Debug\net5.0\Razor\Areas\Admin\Views\Udalost\Index.cshtml.g.cs
 C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti\obj\Debug\net5.0\Razor\Areas\Admin\Views\Udalost\Upsert.cshtml.g.cs
+C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti\obj\Debug\net5.0\Razor\Areas\Pojistnik\Views\Home\Index.cshtml.g.cs
+C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti\obj\Debug\net5.0\Razor\Areas\Pojistnik\Views\Home\Info.cshtml.g.cs
+C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti\obj\Debug\net5.0\Razor\Areas\Pojistnik\Views\Home\Poznamky.cshtml.g.cs
+C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti\obj\Debug\net5.0\Razor\Areas\Pojistnik\Views\_ViewImports.cshtml.g.cs
+C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti\obj\Debug\net5.0\Razor\Areas\Pojistnik\Views\_ViewStart.cshtml.g.cs

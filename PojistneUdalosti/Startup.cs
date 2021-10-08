@@ -60,7 +60,7 @@ namespace PojistneUdalosti
             {
             endpoints.MapControllerRoute(
                 name: "default",
-                pattern: "{area=Pojistenec}/{controller=Home}/{action=Index}/{id?}");
+                pattern: "{area=Pojistnik}/{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
             });
         }

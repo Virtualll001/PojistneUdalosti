@@ -24,7 +24,7 @@ $.extend( $.fn, {
 		// If nothing is selected, return nothing; can't chain anyway
 		if ( !this.length ) {
 			if ( options && options.debug && window.console ) {
-				console.warn( "Nothing selected, can't validate, returning nothing." );
+				console.warn( "Nic není vybráno, nelze ověřit." );
 			}
 			return;
 		}
@@ -360,22 +360,22 @@ $.extend( $.validator, {
 	},
 
 	messages: {
-		required: "This field is required.",
-		remote: "Please fix this field.",
-		email: "Please enter a valid email address.",
-		url: "Please enter a valid URL.",
-		date: "Please enter a valid date.",
-		dateISO: "Please enter a valid date (ISO).",
-		number: "Please enter a valid number.",
-		digits: "Please enter only digits.",
-		equalTo: "Please enter the same value again.",
-		maxlength: $.validator.format( "Please enter no more than {0} characters." ),
-		minlength: $.validator.format( "Please enter at least {0} characters." ),
-		rangelength: $.validator.format( "Please enter a value between {0} and {1} characters long." ),
-		range: $.validator.format( "Please enter a value between {0} and {1}." ),
-		max: $.validator.format( "Please enter a value less than or equal to {0}." ),
-		min: $.validator.format( "Please enter a value greater than or equal to {0}." ),
-		step: $.validator.format( "Please enter a multiple of {0}." )
+		required: "Toto pole je povinné.",
+		remote: "Opravte prosím toto pole.",
+		email: "Zadejte prosím platnou emailovou adresu.",
+		url: "Zadejte prosím platnou URL.",
+		date: "Vložte prosím správné datum.",
+		dateISO: "Vložte prosím správné datum (ISO).",
+		number: "Zadejte prosím platné číslo.",
+		digits: "Zadejte prosím pouze číslice.",
+		equalTo: "Prosím, zadejte znovu stejnou hodnotu.",
+		maxlength: $.validator.format( "Zadejte prosím maximálně {0} znaků." ),
+		minlength: $.validator.format( "Zadejte prosím alespoň {0} znaků." ),
+		rangelength: $.validator.format( "Zadejte prosím hodnotu mezi {0} a {1} znaky." ),
+		range: $.validator.format( "Zadejte prosím hodnotu mezi {0} a {1}." ),
+		max: $.validator.format( "Zadejte prosím hodnotu menší nebo rovnou {0}." ),
+		min: $.validator.format( "Zadejte prosím hodnotu větší nebo rovnou {0}." ),
+		step: $.validator.format( "Zadejte násobek {0}." )
 	},
 
 	autoCreateRanges: false,

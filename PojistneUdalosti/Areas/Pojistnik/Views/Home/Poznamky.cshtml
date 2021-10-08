@@ -2,8 +2,33 @@
     ViewData["Title"] = "O projektu";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
+<div class="text-center">
+    <h1 class="display-4">Pojistné události</h1>
+    <h4 class="text-primary">ASP.NET Core MVC</h4>
+</div>
 <br />
+<h2 class="text-primary">Zadání</h2>
+<ul>
+    <li>Aplikace obsahuje kompletní správu (CRUD) pojištěných (např. "Jan Novák") a jejich pojištění (např. "pojištění bytu"):</li>
+    <li>Vytvoření pojištěného</li>
+    <li>Vytvoření pojištění</li>
+    <li>Zobrazení detailu pojištěného včetně jeho pojištění</li>
+    <li>Zobrazení detailu pojištění</li>
+    <li>Zobrazení seznamu pojištěných</li>
+    <li>Odstranění pojištěného včetně všech jeho pojištění</li>
+    <li>Odstranění pojištění</li>
+    <li>Editace pojištěného</li>
+    <li>Editace pojištění pojištěného</li>
+    <li>Dané entity jsou uloženy v SQL databázi</li>
+    <li>Aplikace je naprogramována podle dobrých praktik a je plně responzivní</li>
+</ul>
+<h5 class="text-white">Rozšíření</h5>
+<ul>
+    <li>Aplikace podporuje uživatelské role (pojištěný, administrátor), návrh a implementace, kdo vidí a může editovat jaká data</li>
+    <li>Aplikace eviduje pojistné události pojištěných, rovněž pomocí kompletní správy (CRUD)</li>
+</ul>
+<br />
+
 <h2 class="text-primary">Použité zdroje</h2>
 <ul>
     <li>
@@ -29,6 +54,11 @@
     </li>
 </ul>
 <br />
+
+<h2 class="text-primary">Tvorba projektu</h2>
+<p>Postup viz <a href="https://github.com/Virtualll001/PojistneUdalosti/commits/main" target="_blank">GitHub commits</a></p>
+<br />
+
 
 <h2 class="text-primary">Problémy</h2>
 <strong class="text-danger">Nefunkční scaffolding na Controlleru</strong>
@@ -61,9 +91,19 @@
 <strong class="text-danger">Chybové hlášky v AJ</strong>
 <br />
 <ul>
-    <li>Nevím jak změnit (přeložit do ČJ) client-side chybové hlášky</li>
     <li>
-        "The Typ field is required." - není nikde v projektu...
+        Nejdou mi přepsat frontendové validace do češtiny.
+    </li>
+    <li>
+        Do češtiny jsem přeložila hlášky v souborech: jquery.validate.js; jquery.validate.min.js, ale na hlášky při tvorbě tabulek to nemá vliv...
+    </li>
+</ul>
+
+<strong class="text-danger">Problémy s databází</strong>
+<br />
+<ul>
+    <li>
+        Chybová hláška: Your SQL Server installation is either corrupt or has been tampered with (Unable to load SQLBOOT.DLL)...
     </li>
 </ul>
 
@@ -82,17 +122,6 @@
     </li>
 </ul>
 <br />
-
-<h2 class="text-primary">Doučit se</h2>
-<ul>
-    <li>Areas</li>
-    <li>Repository a UnitOfWork</li>
-    <li>Dapper</li>
-    <li>DataTables => JS, + úpravy barvy a textu</li>
-    <li>Stored Procedures + SQL (DynamicParameters ?)</li>
-</ul>
 <br />
-<br />
-<p>Postup tvorby projektu viz <a href="https://github.com/Virtualll001/PojistneUdalosti/commits/main" target="_blank">GitHub commits</a>.</p>
 <br />
 

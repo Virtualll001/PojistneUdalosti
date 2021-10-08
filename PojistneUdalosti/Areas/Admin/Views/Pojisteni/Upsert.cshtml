@@ -43,6 +43,15 @@
                 </div>
             </div>
             <div class="form-group row mb-2">
+                <div class="col-3">
+                    <label asp-for="ImageUrl" title="formát url: img/Pojisteni/NazevObrazku.jpg"></label>
+                </div>
+                <div class="col-9">
+                    <input asp-for="ImageUrl" class="form-control" />
+                    <span asp-validation-for="ImageUrl" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row mb-2">
                 <div class="col-9 offset-3">
                     @if (Model.PojisteniId != 0)
                     {
@@ -62,8 +71,8 @@
 <partial name="_ValidationScriptsPartial" />
  }
 
-
 @{
-    //TODO - dořešit přidání pojistníka ke konkrétnímu pojištění + vytvořit statuty např: před schválením, schváleno, aktivní, neaktivní...
+    //TODO - CHYBA - při změně v záznamu Pojištění nedojde jen ke změně, ale vytvoří se nový záznam
+    //TODO - CHYBA - validace na straně klienta jsou v AJ - nevím jak je přeložit
 }
 

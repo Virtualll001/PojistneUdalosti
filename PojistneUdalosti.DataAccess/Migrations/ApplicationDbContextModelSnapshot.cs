@@ -226,6 +226,9 @@ namespace PojistneUdalosti.DataAccess.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<string>("ImageUrl")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Podminky")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -297,8 +300,9 @@ namespace PojistneUdalosti.DataAccess.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("Potvrzeno")
-                        .HasColumnType("bit");
+                    b.Property<string>("Potvrzeno")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("UdalostId");
 

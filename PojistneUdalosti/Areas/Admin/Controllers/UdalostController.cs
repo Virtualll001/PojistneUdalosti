@@ -61,7 +61,7 @@ namespace PojistneUdalosti.Areas.Admin.Controllers
                     
                     if(udalost.ImageUrl != null)
                     {
-                        //edit - odstranění staré fotky
+                        //edit - odstranění staré fotky                        
                         var imagePath = Path.Combine(webRootPath, udalost.ImageUrl.TrimStart('\\'));
                         if (System.IO.File.Exists(imagePath))
                         {
@@ -101,10 +101,11 @@ namespace PojistneUdalosti.Areas.Admin.Controllers
 
         //API calls (funguje u MVC)
         #region API CALLS
+
         [HttpGet]
         public IActionResult GetAll()
         {
-            var allObj = _unitOfWork.Udalost.GetAll(includeProperties:"Pojisteni");
+            var allObj = _unitOfWork.Udalost.GetAll(); //vyhozeno: includeProperties:"Pojisteni"
             return Json(new { data = allObj });
         }
 
@@ -116,6 +117,14 @@ namespace PojistneUdalosti.Areas.Admin.Controllers
             {
                 return Json(new { success = false, message = "Odstranění se nezdařilo." });
             }
+
+            string webRootPath = _hostEnvironment.WebRootPath;
+            var imagePath = Path.Combine(webRootPath, objFromDb.ImageUrl.TrimStart('\\'));
+            if (System.IO.File.Exists(imagePath))
+            {
+                System.IO.File.Delete(imagePath);
+            }
+
             _unitOfWork.Udalost.Remove(objFromDb);
             _unitOfWork.Save();
             return Json(new { success = true, message = "Odstranění proběhlo úspěšně." });

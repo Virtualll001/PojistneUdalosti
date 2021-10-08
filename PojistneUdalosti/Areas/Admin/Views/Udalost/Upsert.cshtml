@@ -38,8 +38,7 @@
                     <label asp-for="Potvrzeno"></label>
                 </div>
                 <div class="col-9">
-                    <input type="radio" name="Potvrzeno" value="neschváleno" checked="checked" asp-for="Potvrzeno" class="form-control" />
-                    <input type="radio" name="Potvrzeno" value="schváleno" asp-for="Potvrzeno" class="form-control" />
+                    <input asp-for="Potvrzeno" class="form-control" />                    
                     <span asp-validation-for="Potvrzeno" class="text-danger"></span>
                 </div>
             </div>

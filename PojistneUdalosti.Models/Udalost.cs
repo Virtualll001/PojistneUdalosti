@@ -19,7 +19,7 @@ namespace PojistneUdalosti.Models
         public string ImageUrl { get; set; }
         [Required]
         [DisplayName("Stav")]
-        public bool Potvrzeno { get; set; }
+        public string Potvrzeno { get; set; }
         
         [Required]
         public int PojistnikId { get; set; }

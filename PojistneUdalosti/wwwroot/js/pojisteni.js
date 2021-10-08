@@ -11,8 +11,8 @@ function loadDataTable() {
         },
         "columns": [
             { "data": "typPojisteni", "width": "20%" },
-            { "data": "podminky", "width": "50%" },
-            { "data": "zaloha", "width": "10%" },
+            { "data": "podminky", "width": "40%" },
+            { "data": "zaloha", "width": "10%" },            
             {
                 "data": "pojisteniId",
                 "render": function (data) {
@@ -25,7 +25,7 @@ function loadDataTable() {
                                     <i class="fas fa-trash-alt"></i>
                                 </a>
                             </div>`;
-                }, "width": "20%"
+                }, "width": "30%"
             }
         ]
     });

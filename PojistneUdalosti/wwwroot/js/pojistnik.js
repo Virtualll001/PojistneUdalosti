@@ -14,7 +14,7 @@ function loadDataTable() {
             { "data": "prijmeni", "width": "10%" },
             { "data": "adresa", "width": "22%" },            
             { "data": "telefonCislo", "width": "15%" },
-            { "data": "pojisteni.pojisteniId", "width": "15%" }, //za tečkou se píše malé písmeno!
+            { "data": "pojisteniId", "width": "15%" }, //za tečkou se píše malé písmeno!
             {
                 "data": "pojistnikId",
                 "render": function (data) {
