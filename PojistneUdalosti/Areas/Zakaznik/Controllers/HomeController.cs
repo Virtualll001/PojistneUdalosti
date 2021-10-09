@@ -9,9 +9,9 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace PojistneUdalosti.Areas.Pojistnik.Controllers
+namespace PojistneUdalosti.Areas.Zakaznik.Controllers
 {
-    [Area("Pojistnik")]
+    [Area("Zakaznik")]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -26,7 +26,7 @@ namespace PojistneUdalosti.Areas.Pojistnik.Controllers
 
         public IActionResult Index()
         {
-            IEnumerable<Pojisteni> seznamPojist = _unitOfWork.Pojisteni.GetAll(); //NEFACHÁ: (includeProperties: "Pojistnik,Udalost");              
+            IEnumerable<Pojisteni> seznamPojist = _unitOfWork.Pojisteni.GetAll(); //includeProperties: "Pojistnik,Udalost"            
             return View(seznamPojist);
         }
 

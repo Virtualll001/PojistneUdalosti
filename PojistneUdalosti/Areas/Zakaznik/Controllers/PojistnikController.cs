@@ -1,14 +1,11 @@
 ﻿using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using PojistneUdalosti.DataAccess.Repository.IRepository;
-using PojistneUdalosti.Models.ViewModels;
 using PojistneUdalosti.Models;
-using System.Linq;
 
-namespace PojistneUdalosti.Areas.Admin.Controllers
+namespace PojistneUdalosti.Areas.Zakaznik.Controllers
 {
-    [Area("Admin")]
+    [Area("Zakaznik")]
     public class PojistnikController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
@@ -27,48 +24,47 @@ namespace PojistneUdalosti.Areas.Admin.Controllers
 
         public IActionResult Upsert(int? id)
         {
-            PojistnikVM pojistnikVM = new PojistnikVM()
+            Pojistnik pojistnik = new Pojistnik();
+            /*
             {
-                //Pojistnik = new Pojistnik(),
+                Pojistnik=new Pojistnik(),
                 SeznamPojisteni = _unitOfWork.Pojisteni.GetAll().Select(i => new SelectListItem {
                     Text = i.TypPojisteni,                    
                     Value = i.PojisteniId.ToString()
                 })
-            };
+            };*/
 
-            if(id == null) //jde o CREATE
+            if (id == null) //jde o CREATE
             {
-                return View(pojistnikVM);
+                return View(pojistnik);
             }
             //jde o EDIT
-            pojistnikVM.Pojistnik = _unitOfWork.Pojistnik.Get(id.GetValueOrDefault());
-            if(pojistnikVM.Pojistnik == null)
+            pojistnik = _unitOfWork.Pojistnik.Get(id.GetValueOrDefault());
+            if(pojistnik == null)
             {
                 return NotFound();
             }
-            return View(pojistnikVM);            
+            return View(pojistnik);            
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Upsert(PojistnikVM pojistnikVM)
-        {
+        public IActionResult Upsert(Pojistnik pojistnik)
+        {            
             if (ModelState.IsValid)
             {
-                //tady dodělat opravy kvůli ViewModelu!
-
-
-                if (pojistnikVM.Pojistnik.PojistnikId == 0)
+                if (pojistnik.PojistnikId == 0)
                 {
-                    _unitOfWork.Pojistnik.Add(pojistnikVM.Pojistnik);                   
+                    _unitOfWork.Pojistnik.Add(pojistnik);                   
                 }
                 else
                 {
-                    _unitOfWork.Pojistnik.Update(pojistnikVM.Pojistnik);
+                    _unitOfWork.Pojistnik.Update(pojistnik);
                 }
                 _unitOfWork.Save();
                 return RedirectToAction(nameof(Index)); //nepoužívat "magic-string"
             }
+            /*
             else
             {
                 pojistnikVM.SeznamPojisteni = _unitOfWork.Pojisteni.GetAll().Select(i => new SelectListItem
@@ -80,8 +76,8 @@ namespace PojistneUdalosti.Areas.Admin.Controllers
                 {
                     pojistnikVM.Pojistnik = _unitOfWork.Pojistnik.Get(pojistnikVM.Pojistnik.PojistnikId);
                 }
-            }
-            return View(pojistnikVM);
+            }*/
+            return View(pojistnik);
         }
 
         //API calls (funguje u MVC)

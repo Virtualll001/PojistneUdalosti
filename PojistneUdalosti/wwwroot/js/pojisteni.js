@@ -24,7 +24,8 @@ function loadDataTable() {
                                 <a onclick=Delete("/Admin/Pojisteni/Delete/${data}") class="btn btn-danger text-white" style="cursor:pointer">
                                     <i class="fas fa-trash-alt"></i>
                                 </a>
-                            </div>`;
+                            </div>
+                            `;
                 }, "width": "30%"
             }
         ]

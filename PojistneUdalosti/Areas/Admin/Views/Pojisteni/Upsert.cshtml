@@ -10,7 +10,8 @@
 
 <form method="post">
     <div class="row p-3 border">
-        <div asp-validation-summary="ModelOnly" class="text-danger"></div>       
+        <input type="hidden" asp-for="PojisteniId" />
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
         <div class="col-12 border-bottom">
             <h2 class="text-primary">@title</h2>
         </div>
@@ -44,11 +45,10 @@
             </div>
             <div class="form-group row mb-2">
                 <div class="col-3">
-                    <label asp-for="ImageUrl" title="formát url: img/Pojisteni/NazevObrazku.jpg"></label>
+                    <label asp-for="ImageUrl" title="formát url: img/pojisteni/NazevObrazku.jpg"></label>
                 </div>
                 <div class="col-9">
-                    <input asp-for="ImageUrl" class="form-control" />
-                    <span asp-validation-for="ImageUrl" class="text-danger"></span>
+                    <input type="file" name="files" id="uploadBox" asp-for="ImageUrl" class="form-control" />                    
                 </div>
             </div>
             <div class="form-group row mb-2">

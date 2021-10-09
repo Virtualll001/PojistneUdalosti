@@ -10,9 +10,9 @@ function loadDataTable() {
             "url": "/Admin/Pojistnik/GetAll"           
         },
         "columns": [
-            { "data": "jmeno", "width": "8%" }, //camel case - první písmeno malé!
+            { "data": "jmeno", "width": "10%" }, //camel case - první písmeno malé!
             { "data": "prijmeni", "width": "10%" },
-            { "data": "adresa", "width": "22%" },            
+            { "data": "adresa", "width": "25%" },            
             { "data": "telefonCislo", "width": "15%" },
             { "data": "pojisteniId", "width": "15%" }, //za tečkou se píše malé písmeno!
             {
@@ -20,14 +20,14 @@ function loadDataTable() {
                 "render": function (data) {
                     return `
                             <div class="text-center">
-                                <a href="/Admin/Pojistnik/Upsert/${data}" class="btn btn-success text-white" style="cursor:pointer">
+                                <a href="Zakaznik/Pojistnik/Upsert/${data}" class="btn btn-success text-white" style="cursor:pointer">
                                     <i class="fas fa-edit"></i>
                                 </a>
-                                <a onclick=Delete("/Admin/Pojistnik/Delete/${data}") class="btn btn-danger text-white" style="cursor:pointer">
+                                <a onclick=Delete("Zakaznik/Pojistnik/Delete/${data}") class="btn btn-danger text-white" style="cursor:pointer">
                                     <i class="fas fa-trash-alt"></i>
                                 </a>
                             </div>`;
-                }, "width": "30%"
+                }, "width": "25%"
             }
         ]
     });

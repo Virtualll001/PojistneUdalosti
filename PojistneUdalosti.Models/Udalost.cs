@@ -15,7 +15,7 @@ namespace PojistneUdalosti.Models
         public int UdalostId { get; set; }
         [Required]
         public string Popis { get; set; }
-        public string Foto { get; set; }
+        public string Foto { get; set; }//odebrat
         public string ImageUrl { get; set; }
         [Required]
         [DisplayName("Stav")]

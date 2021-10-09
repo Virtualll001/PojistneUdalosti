@@ -9,3 +9,4 @@ C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti.Utility\obj\Debug\
 C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti.Utility\obj\Debug\net5.0\PojistneUdalosti.Utility.dll
 C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti.Utility\obj\Debug\net5.0\ref\PojistneUdalosti.Utility.dll
 C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti.Utility\obj\Debug\net5.0\PojistneUdalosti.Utility.pdb
+C:\Users\lonet\source\repos\PojistneUdalosti\PojistneUdalosti.Utility\obj\Debug\net5.0\PojistneUdalosti.Utility.csproj.AssemblyReference.cache
